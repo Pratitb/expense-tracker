@@ -7,11 +7,11 @@ const MobileMenu = ({ items }: MobileMenuType) => {
         navigate(page)
     }
     return (
-        <div className="flex justify-between fixed w-full bottom-0 px-4 pt-3 pb-2 border-t border-t-gray-200">
+        <div className="flex justify-between gap-4 fixed w-full bottom-0 left-0 px-4 pt-3 pb-2 border-t border-t-gray-200">
             {items.map(i => {
                 const Icon = i.icon
                 return (
-                    <div key={i.name} className="flex flex-col items-center" onClick={() => handleItemClick(i.page)}>
+                    <div key={i.name} className="flex flex-col items-center text-center" onClick={() => handleItemClick(i.page)}>
                         <Icon size={24} />
                         <p className="capitalize">{i.name}</p>
                     </div>
