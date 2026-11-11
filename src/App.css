@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@layer base {}
+
+@layer utilities {
+    .container {
+        @apply w-full max-w-[1206px] p-5 mx-auto
+    }
+}

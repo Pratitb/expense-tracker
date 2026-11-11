@@ -1,15 +1,22 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-// import MobileHeader from './components/MobileHeader'
-import MobileMenu from './components/MobileMenu'
-import { mobileMenu } from './utils/data'
+import Transactions from './pages/Transactions'
+import Settings from './pages/Settings'
+import Layout from './layout'
+import Home from './pages/Home'
+import AddTransaction from './pages/AddEntry'
 
 const App = () => {
-
   return (
-    <>
-      {/* <MobileHeader /> */}
-      <MobileMenu items={mobileMenu} />
-    </>
+    <Layout>
+      <Routes>
+        <Route path='/home' element={<Home />} />
+        <Route path='/transactions' element={<Transactions />} />
+        <Route path='/add-entry' element={<AddTransaction />} />
+        <Route path='/settings' element={<Settings />} />
+      </Routes>
+    </Layout>
+
   )
 }
 
