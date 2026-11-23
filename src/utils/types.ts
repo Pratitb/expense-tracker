@@ -7,3 +7,12 @@ export interface MobileMenuItem {
 export interface MobileMenuType {
     items: MobileMenuItem[]
 }
+
+export interface AddEntryType {
+    type: string
+    id: string
+    dateVal: string
+    category: string
+    desc: string
+    amount: number
+}

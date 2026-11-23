@@ -4,6 +4,10 @@
 
 @layer utilities {
     .container {
-        @apply w-full max-w-[1206px] p-5 mx-auto
+        @apply w-full max-w-[1206px] px-5 py-2 mx-auto
+    }
+
+    .wrapper-dark {
+        @apply bg-gray-950
     }
 }
