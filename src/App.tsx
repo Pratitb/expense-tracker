@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Layout>
       <Routes>
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/transactions' element={<Transactions />} />
         <Route path='/add-entry' element={<AddTransaction />} />
         <Route path='/settings' element={<Settings />} />
