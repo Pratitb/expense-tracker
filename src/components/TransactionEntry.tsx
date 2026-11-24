@@ -16,6 +16,7 @@ const TransactionEntry = ({ icon: Icon, category, desc, date, amount, expenseTyp
 
     return (
         <div className={`flex justify-between items-center gap-2 border rounded-lg px-3 py-3 ${theme === 'dark' ? 'border-gray-300' : 'border-gray-700'}`}>
+            {/* icon, category, desc */}
             <div className="flex items-center gap-4">
                 <Icon size={36} className={`rounded-xl p-2 ${theme === 'dark' ? 'bg-gray-400' : 'bg-gray-100'}`} />
                 <div>
@@ -23,13 +24,17 @@ const TransactionEntry = ({ icon: Icon, category, desc, date, amount, expenseTyp
                     <p className="capitalize text-gray-400 text-xs">{desc}</p>
                 </div>
             </div>
-            <div>
-                <p className={`font-semibold leading-5 ${expenseType.toLowerCase() === 'expense' ? 'text-red-400' : 'text-green-600'}`}>&#8377;{amount}</p>
-                <p className="text-xs text-gray-400">{date}</p>
-            </div>
-            <div className="flex gap-4">
-                <Pen size={20} onClick={getUpdateFn} className={`${theme === 'dark' ? 'text-gray-400' : ''}`} />
-                <Trash size={20} onClick={getDeleteFn} className={`${theme === 'dark' ? 'text-gray-400' : ''}`} />
+            <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
+                {/* amount, date */}
+                <div>
+                    <p className={`font-semibold leading-5 ${expenseType.toLowerCase() === 'expense' ? 'text-red-400' : 'text-green-600'}`}>&#8377;{amount}</p>
+                    <p className="text-xs text-gray-400">{date}</p>
+                </div>
+                {/* edit, delete */}
+                <div className="flex gap-4">
+                    <Pen size={20} onClick={getUpdateFn} className={`${theme === 'dark' ? 'text-gray-400' : ''}`} />
+                    <Trash size={20} onClick={getDeleteFn} className={`${theme === 'dark' ? 'text-gray-400' : ''}`} />
+                </div>
             </div>
         </div>
     )

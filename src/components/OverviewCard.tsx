@@ -19,7 +19,7 @@ const OverviewCard = ({ icon: Icon, head, amount, color }: OCType) => {
     const theme = useExpenseStore(state => state.theme)
 
     return (
-        <div className={`border rounded-lg px-4 py-3 flex items-center gap-8 ${theme === 'dark' ? 'text-gray-300' : ''}`}>
+        <div className={`border rounded-lg px-4 py-3 flex flex-1 items-center gap-8 ${theme === 'dark' ? 'text-gray-300' : ''}`}>
             <Icon size={32} />
             <div>
                 <p className={`capitalize ${theme === 'dark' ? 'text-gray-300' : 'text-gray-400'}`}>{head}</p>

@@ -21,11 +21,11 @@ const Settings = () => {
 
     return (
         <>
-            <Button btnName="clear all entries" getActionFn={handleClear} />
             <div className="mt-8 ">
                 <p className={`capitalize font-medium text-lg mb-2 ${appTheme === 'dark' ? 'text-gray-400' : ''}`}>app theme</p>
                 <TypeTabs getTabs={themeOpts} getTabClick={handleTheme} getActiveTab={appTheme} />
             </div>
+            <Button btnName="clear all entries" getActionFn={handleClear} />
         </>
     )
 }

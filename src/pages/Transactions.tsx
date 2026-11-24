@@ -44,7 +44,18 @@ const Transactions = () => {
         <div>
             <TypeTabs getTabs={expenseTabs} getTabClick={handlTabClick} getActiveTab={expenseType} />
             <div className="flex flex-col mt-6 gap-4 overflow-auto max-h-[610px]">
-                {filteredEntries.length === 0 ? <p className="text-gray-400 capitalize text-sm text-center">no entries yet. go to "add entry" page and add a record to see here.</p> : filteredEntries.map(re => <TransactionEntry key={re.id} icon={categoryIcons[re.category as Category]} category={re.category} desc={re.desc} date={re.dateVal} amount={re.amount} expenseType={re.type} getDeleteFn={() => deleteRecord(re.id)} getUpdateFn={() => handleEdit(re)} />)}
+                {filteredEntries.length === 0 ?
+                    <p className="text-gray-400 capitalize text-sm text-center">
+                        no entries yet. go to "add entry" page and add a record to see here.
+                    </p>
+                    :
+                    filteredEntries.map(re =>
+                        <TransactionEntry key={re.id}
+                            icon={categoryIcons[re.category as Category]}
+                            category={re.category} desc={re.desc} date={re.dateVal}
+                            amount={re.amount} expenseType={re.type}
+                            getDeleteFn={() => deleteRecord(re.id)}
+                            getUpdateFn={() => handleEdit(re)} />)}
             </div>
         </div>
     )

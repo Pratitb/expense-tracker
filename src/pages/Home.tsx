@@ -11,9 +11,11 @@ const Home = () => {
     return (
         <div className='flex flex-col gap-4'>
             <p className={`text-xl font-semibold capitalize ${theme === 'dark' ? 'text-gray-300' : ''}`}>overview</p>
-            <OverviewCard icon={TrendingUp} head='total income' amount={totalIncome} color='income' />
-            <OverviewCard icon={TrendingDown} head='total expenses' amount={totalExpenses} color='expense' />
-            <OverviewCard icon={Scale} head='balance' amount={balance} color='balance' />
+            <div className='lg:flex lg:gap-2'>
+                <OverviewCard icon={TrendingUp} head='total income' amount={totalIncome} color='income' />
+                <OverviewCard icon={TrendingDown} head='total expenses' amount={totalExpenses} color='expense' />
+                <OverviewCard icon={Scale} head='balance' amount={balance} color='balance' />
+            </div>
         </div>
     )
 }
